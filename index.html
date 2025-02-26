@@ -7,10 +7,20 @@
     <title>Review Phim</title>
     <style>
         body {
+            background: url('./images/freepik__upload__68787.png');
+            background-size: cover;
+            /* Đảm bảo hình ảnh được kéo dài để phủ toàn bộ */
+            background-position: center center;
+            /* Đảm bảo hình ảnh được căn giữa */
+            background-attachment: fixed;
+            /* Hình ảnh sẽ không bị cuộn khi trang web cuộn */
+            background-repeat: no-repeat;
+            /* Ngừng việc lặp lại hình ảnh */
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 0;
-            max-width: 800px;
+            max-width: 900px;
+            min-height: 100vh;
             margin: auto;
             text-align: center;
         }
@@ -67,6 +77,12 @@
             opacity: 0.5;
         }
 
+        .text h1 {
+            font-size: 4em;
+            -webkit-text-stroke: 1px #fff;
+            color: transparent;
+        }
+
         @media (max-width: 600px) {
             body {
                 margin: 10px;
@@ -82,7 +98,11 @@
 </head>
 
 <body>
-    <h1>Cinema System</h1>
+
+    <div class="text">
+        <h1>Cinema System</h1>
+    </div>
+    <!-- <h1>Cinema System</h1> -->
     <!-- <img src="event-image.jpg" alt="Hình ảnh sự kiện"> -->
     <!-- <p><strong>Ngày 10/03/2025 - Tại TP. Hồ Chí Minh</strong></p> -->
     <!-- <p>Sự kiện hứa hẹn mang đến những trải nghiệm tuyệt vời, kết nối với chuyên gia và nhiều cơ hội hấp dẫn. Đừng bỏ lỡ
